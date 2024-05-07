@@ -26,7 +26,7 @@ function ProductsList() {
           <li key={product.id} className='li'>
            <div className="card-item">
     <div className="card-item--body">
-      <a href={<ProductDetail props={product.id}/>}>
+      <a href={<ProductDetail key={product.id}/>}>
       <img className="card-img" src={product.thumbnail} alt={product.title} />
       </a>
     </div>

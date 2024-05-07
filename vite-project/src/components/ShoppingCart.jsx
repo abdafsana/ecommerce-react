@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import { removeFromCart } from '../cartSlice';
+import { removeFromCart } from '../features/cartSlice';
 
 function Cart() {
   const cartItems = useSelector(state => state.cart.items);
@@ -19,9 +19,9 @@ function Cart() {
         <ul className='shoppingCart'>
           {cartItems?.map(item => (
             
-            <li key={item.id} className="cart-item"> {/* item.key veya item.productId gibi bir alan adı kullanın */}
+            <li key={item.id} className="cart-item">
               <div>
-                <img src={item.thumbnail} alt={item.title} /> {/* item.image kullanın */}
+                <img src={item.thumbnail} alt={item.title} /> 
                 <h3>{item.title}</h3>
                 <p>Price: ${item.price}</p>
               <button onClick={() => handleRemoveFromCart(item.id)}>Remove</button>
