@@ -3,7 +3,7 @@ import { useGetProductsQuery } from '../services/api';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../features/cartSlice';
 import "../../src/index.css"
-import ProductDetail from './ProductDetail';
+import { Link } from "react-router-dom";
 
 function ProductsList() {
   const { data, error, isLoading } = useGetProductsQuery(); 
@@ -26,9 +26,9 @@ function ProductsList() {
           <li key={product.id} className='li'>
            <div className="card-item">
     <div className="card-item--body">
-      <a href={<ProductDetail key={product.id}/>}>
+      <Link to={'/productDeatil/' + product.id}>
       <img className="card-img" src={product.thumbnail} alt={product.title} />
-      </a>
+      </Link>
     </div>
     <div className="card-item--footer display__com">
     <i className="fa-solid fa-cart-shopping"></i>
