@@ -12,7 +12,7 @@ function Cart() {
 
   return (
     <div className="cart">
-      <h2>Shopping Cart</h2>
+      <h2 className='product-title'>Shopping Cart</h2>
       {cartItems?.length === 0 ? (
         <p>Your cart is empty</p>
       ) : (
@@ -24,7 +24,7 @@ function Cart() {
                 <img src={item.thumbnail} alt={item.title} /> 
                 <h3>{item.title}</h3>
                 <p>Price: ${item.price}</p>
-              <button onClick={() => handleRemoveFromCart(item.id)}>Remove</button>
+              <button className='remove' onClick={() => handleRemoveFromCart(item.id)}>Remove</button>
               </div>
             </li>
           ))}

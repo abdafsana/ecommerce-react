@@ -10,9 +10,9 @@ function ProductDetail() {
 
   return (
     <div className='shoppingcart'>
-      <h1>{product.title}</h1>
+      <h1>{product.name}</h1>
       <div>
-        <img src={product.image} alt={product.title} />
+        <img src={product.thumbnail} alt={product.title} />
       </div>
       <p>Description: {product.description}</p>
       <p>Price: ${product.price}</p>
